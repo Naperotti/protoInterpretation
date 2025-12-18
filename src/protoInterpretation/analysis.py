@@ -501,3 +501,21 @@ def compute_cumulative_embeddings(
         raise ValueError(f"Unknown method: {method}. Choose from 'mean', 'ema', or 'sum'")
     
     return cumulative
+
+def extract_extreme_pairs(metrics):
+    """
+    Extract extreme pair indices from HorizonMetrics. 
+    
+    Returns:
+        List of tuples:  [(step, chain_i, chain_j), ...]
+    """
+    extreme_pairs = metrics. line_fit.extreme_pairs
+    
+    result = []
+    for step in range(len(extreme_pairs)):
+        i = int(extreme_pairs[step, 0])
+        j = int(extreme_pairs[step, 1])
+        result.append((step, i, j))
+    
+    return result
+    
