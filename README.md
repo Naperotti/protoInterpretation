@@ -148,6 +148,7 @@ wrapper = ModelWrapper.from_pretrained(temp_dir)
 ```
 protoInterpretation/
 ├── README.md
+├── PAIRWISE_DISTANCE_LOCATIONS.md  # Documentation of pairwise distance computation
 ├── requirements.txt
 ├── setup.py
 ├── .gitignore
@@ -157,10 +158,14 @@ protoInterpretation/
         ├── model.py           # HF model wrapper
         ├── data_structures.py # Core dataclasses
         ├── sampling.py        # Full-chain sampling
-        ├── analysis.py        # Openness metrics
-        ├── projections.py     # PCA/UMAP
+        ├── analysis.py        # Openness metrics (pairwise distances here!)
+        ├── projections.py     # PCA/UMAP (pairwise distances for diagnostics)
         └── viz.py             # Plotting helpers
 ```
+
+## Developer Documentation
+
+- **[Pairwise Distance Locations](PAIRWISE_DISTANCE_LOCATIONS.md)** - Detailed guide to where and how pairwise distances are computed in the codebase
 
 ## License
 
